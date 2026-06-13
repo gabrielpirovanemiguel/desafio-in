@@ -1,3 +1,4 @@
+import printConsoleScreen from "./printConsoleScreen";
 const phrase = (prompt("Insira uma frase: ").toLowerCase()).replaceAll(" ", "");
 const isPhrasePalindrome = isPalindrome(phrase);
 
@@ -12,9 +13,4 @@ function isPalindrome(text) {
         j--;
     }
     return true;
-}
-
-function printConsoleScreen(text) {
-    console.log(text);
-    alert(text);
 }
