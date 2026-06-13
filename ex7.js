@@ -15,7 +15,7 @@ while (isRunning) {
                 printConsoleScreen('Não há nenhum cliente na fila.');
                 break
             }
-            printConsoleScreen(`O cliente ${firstClient} está sendo atendido e foi removido da fila.`)
+            printConsoleScreen(`O cliente ${firstClient} está sendo atendido e foi removido da fila.`);
             break
         case '3':
             isRunning = false;

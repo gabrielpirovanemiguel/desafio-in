@@ -50,7 +50,7 @@ function adicionarJogador(jogadores, nome, idade, posicao, pontuacao) {
 };
 
 function buscarPorPosicao(jogadores, posicao) { 
-  return jogadores.filter(jogador => jogador.posicao === posicao) 
+  return jogadores.filter(jogador => jogador.posicao === posicao); 
 };
 
 function listarTime(jogadores, mensagemInicial) {
