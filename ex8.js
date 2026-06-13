@@ -1,7 +1,9 @@
+import printConsoleScreen from "./printConsoleScreen.js";
 function analisarConsumo(valoresConsumo) {
     let limiteMaximo;
     do {
         limiteMaximo = parseFloat(prompt('Digite um valor limite válido para a categoria "Econômico": '));
+        if (isNaN(limiteMaximo)) printConsoleScreen('Entrada inválida, tente novamente.');
     } while (isNaN(limiteMaximo));
     let classificacoes = [];
     valoresConsumo.forEach(valor => {
@@ -22,3 +24,4 @@ function analisarConsumo(valoresConsumo) {
     alert(mensagem);
     return classificacoes;
 }
+analisarConsumo([45, 34, 35, 2432]);

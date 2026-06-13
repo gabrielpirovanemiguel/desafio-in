@@ -12,11 +12,13 @@ while (rodando) {
       let idade;
       do {
         idade = parseInt(prompt(`${cabecalho}Digite a idade do jogador: `));
+        if (isNaN(idade) || idade < 0) printConsoleScreen('Entrada inválida, tente novamente.');
       } while (isNaN(idade) || idade < 0);
       const posicao = prompt(`${cabecalho}Digite a posição do jogador: `).toLowerCase().trim();
       let pontuacao;
       do {
         pontuacao = parseInt(prompt(`${cabecalho}Digite a pontuação do jogador: `));
+        if (isNaN(pontuacao) || pontuacao < 0) printConsoleScreen('Entrada inválida, tente novamente.');
       } while (isNaN(pontuacao) || pontuacao < 0);
       adicionarJogador(jogadores, nome, idade, posicao, pontuacao);
       break
@@ -40,7 +42,7 @@ while (rodando) {
       rodando = false;
       break
     default:
-      imprimirConsoleTela('Opção inválida. Tente novamente.');
+      imprimirConsoleTela('Entrada inválida, tente novamente.');
       break
   }
 }
