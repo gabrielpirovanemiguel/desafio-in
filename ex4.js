@@ -1,5 +1,7 @@
-let phrase = (prompt("Insira uma frase: ").toLowerCase()).replaceAll(" ", "");
-alert(isPalindrome(phrase) ? `A frase ${phrase} é um palíndromo.` : `A frase ${phrase} não é um palíndromo.`);
+const phrase = (prompt("Insira uma frase: ").toLowerCase()).replaceAll(" ", "");
+const isPhrasePalindrome = isPalindrome(phrase);
+
+isPhrasePalindrome ? printConsoleScreen(`A frase ${phrase} é um palíndromo.`) : printConsoleScreen(`A frase ${phrase} não é um palíndromo.`);
 
 function isPalindrome(text) {
     let i = 0;
@@ -10,4 +12,9 @@ function isPalindrome(text) {
         j--;
     }
     return true;
+}
+
+function printConsoleScreen(text) {
+    console.log(text);
+    alert(text);
 }
