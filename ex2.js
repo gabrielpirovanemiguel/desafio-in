@@ -1,4 +1,4 @@
-//Refatorar
+import printConsoleScreen from "./printConsoleScreen.js";
 let a;
 do {
     a = parseFloat(prompt("Insira uma raiz A ≠ 0 para a equação: "));
@@ -11,10 +11,10 @@ if (discriminant > 0) {
     let denominator = 2*a;
     let x1 = -b + valueDiscriminant / denominator;
     let x2 = -b - valueDiscriminant / denominator;
-    alert(`Essa equação possui duas raízes.\nValor de x1: ${x1.toFixed(2)}\nValor de x2: ${x2.toFixed(2)}`);
+    printConsoleScreen(`Essa equação possui duas raízes.\nValor de x1: ${x1.toFixed(2)}\nValor de x2: ${x2.toFixed(2)}`);
 } else if (discriminant === 0) {
     let x = -b / (2*a);
-    alert(`Essa equação possui uma única raiz: ${x.toFixed(2)}`)
+    printConsoleScreen(`Essa equação possui uma única raiz: ${x.toFixed(2)}`);
 } else {
-    alert(`Essa equação não possui raízes reais.`)
+    printConsoleScreen(`Essa equação não possui raízes reais.`);
 }

@@ -1,4 +1,5 @@
 //As funções estão printando tando com o alert tanto no console
+import printConsoleScreen from "./printConsoleScreen.js";
 let jogadores = [];
 let rodando = true;
 while (rodando) {
@@ -73,8 +74,8 @@ function calcularPontuacaoMedia(jogadores) {
   return (soma / contagemJogadores).toFixed(2);
 };
 
+//Renomeando função "printConsoleScreen" para "imprimirConsoleTela" para manter o padrão em pt-br
 function imprimirConsoleTela(texto) {
-  console.log(texto);
-  alert(texto);
+  printConsoleScreen(texto);
 };
 

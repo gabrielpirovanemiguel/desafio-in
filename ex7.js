@@ -1,3 +1,4 @@
+import printConsoleScreen from "./printConsoleScreen.js";
 let queue = [];
 let isRunning = true;
 while (isRunning) {
@@ -37,9 +38,4 @@ function showFormattedQueue(queue) {
         console.log('Não há clientes na fila.');
         return 'Não há clientes na fila.\n';
     }
-}
-
-function printConsoleScreen(text) {
-    console.log(text);
-    alert(text);
 }
