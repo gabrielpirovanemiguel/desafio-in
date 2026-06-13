@@ -1,0 +1,12 @@
+let goAgain = "s";
+while (goAgain === "s") {
+    let num;
+    let fatorial = (n) => (n <= 0)? 1: n*fatorial(n-1);
+    do {
+        num = parseInt(prompt("Insira um número inteiro positivo maior que 0: "));
+    } while (num <= 0 || isNaN(num));
+    alert(`Fatorial de ${num}: ${fatorial(num)}`);
+    do {
+        goAgain = prompt("Deseja calcular o fatorial de outro número (S/N)?: ");
+    } while (goAgain.toLowerCase() !== "s" && goAgain.toLowerCase() !== "n");
+}
